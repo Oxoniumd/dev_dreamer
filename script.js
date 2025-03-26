@@ -1,53 +1,102 @@
-let game = {
-  name: "Sonic",
-  platform: "SEGA",
-  year: 1991,
-};
+// let game = {
+//   name: "Sonic",
+//   platform: "SEGA",
+//   year: 1991,
+// };
 
-let gameMap = new Map();
-// gameMap.set("Name", "Sonic the hedgehog");
-// gameMap.set(3, " the number three");
-// gameMap.set(true, "boolean");
+// let gameMap = new Map();
+// // gameMap.set("Name", "Sonic the hedgehog");
+// // gameMap.set(3, " the number three");
+// // gameMap.set(true, "boolean");
 
-// let getInfo = gameMap.get("Name");
-// let hasInfo = gameMap.has("Name");
-// console.log(gameMap);
+// // let getInfo = gameMap.get("Name");
+// // let hasInfo = gameMap.has("Name");
+// // console.log(gameMap);
 
-// console.log(getInfo);
+// // console.log(getInfo);
 
-// gameMap.set("SEGA", "Sonic the Hedgehog");
-// gameMap.set("SNES", "Super mario");
-// gameMap.set("PS", "Spyro");
+// // gameMap.set("SEGA", "Sonic the Hedgehog");
+// // gameMap.set("SNES", "Super mario");
+// // gameMap.set("PS", "Spyro");
 
-// console.log(gameMap);
+// // console.log(gameMap);
 
-// for (let key of gameMap.keys()) {
-//   console.log(key);
+// // for (let key of gameMap.keys()) {
+// //   console.log(key);
+// // }
+
+// // for (let value of gameMap.values()) {
+// //   console.log(value);
+// // }
+
+// // for (let [k, y] of gameMap.entries()) {
+// //   console.log(`${k} has value of ${y}`);
+// // }
+
+// // let weakMap = new WeakMap();
+
+// // weakMap.set("Name", "John");
+
+// // console.log(weakMap);
+
+// let tourMap = new Map();
+
+// tourMap.set("Ryu", "Japan");
+// tourMap.set("ken", " USA");
+// tourMap.set("Guile", "USA");
+// tourMap.set("Blanka", "Brazil");
+
+// console.log(tourMap);
+
+// for (let [k, v] of tourMap.entries()) {
+//   console.log(`${k} is a city in  ${v}`);
 // }
 
-// for (let value of gameMap.values()) {
-//   console.log(value);
+// const game = {
+//   title: "Sonic the hedgehog",
+//   year: 1991,
+// };
+
+// function info(platform, character) {
+//   console.log(
+//     `${this.title} was released in ${this.year}, for ${platform},
+//     it features the character ${character}`
+//   );
 // }
 
-// for (let [k, y] of gameMap.entries()) {
-//   console.log(`${k} has value of ${y}`);
-// }
+// info.apply(game, ["SEGA", "Sonic"]);
 
-// let weakMap = new WeakMap();
+// info();
 
-// weakMap.set("Name", "John");
+// const game = {
+//   title: " donkey kong country",
+//   platform: "SNES",
+//   year: 1994,
+//   character: {
+//     main: "Donkey kong",
+//     side: "diddy kong",
+//     boss: "King k.Rool",
+//   },
+// };
 
-// console.log(weakMap);
+// let {
+//   title,
+//   platform,
+//   year: release,
+//   character: { main, side, boss },
+// } = game;
 
-let tourMap = new Map();
+// console.log(main, side, boss);
 
-tourMap.set("Ryu", "Japan");
-tourMap.set("ken", " USA");
-tourMap.set("Guile", "USA");
-tourMap.set("Blanka", "Brazil");
+const book = [
+  "the last battle",
+  "C.S Lewis",
+  "1956",
+  ["shift", "puzzle", "Tirian"],
+];
 
-console.log(tourMap);
+// array destructuring
 
-for (let [k, v] of tourMap.entries()) {
-  console.log(`${k} is a city in  ${v}`);
-}
+let [title, author, year, [a, b, c]] = book;
+
+console.log(a, b, c);
