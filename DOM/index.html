@@ -7,10 +7,29 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>Welcome to CareerEx</h1>
+    <!-- <h1>Welcome to CareerEx</h1>
     <p class="san">We are Frontend developers</p>
     <p id="message">javascript</p>
-    <input type="radio" name="language" id="" value\ />
-    <script src="../DOM/script.js"></script>
+    <input type="radio" name="language" id="" value\ /> -->
+    <div id="container">
+      <button
+        type="button"
+        id="btn"
+        onclick="console.log(this.id);
+      "
+      >
+        CLICK HERE
+      </button>
+    </div>
+    <script>
+      let btn = document.getElementById("btn");
+
+      const displaymsg = () => {
+        console.log("button clicked");
+      };
+      btn.addEventListener("click", displaymsg);
+
+      btn.removeEventListener();
+    </script>
   </body>
 </html>
